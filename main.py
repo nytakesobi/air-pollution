@@ -23,8 +23,8 @@ if select_page == 'Головна сторінка':
     """
     )
 
-    img1 = Image.open('C:/Users/kalok/PycharmProjects/mkalokhina/air_pollution.jpg')
-    img2 = Image.open('C:/Users/kalok/PycharmProjects/mkalokhina/air_pollution4.jpg')
+    img1 = Image.open('air_pollution.jpg')
+    img2 = Image.open('air_pollution4.jpg')
 
     col1, col2 = st.columns(2)
     with col1:
@@ -48,7 +48,7 @@ if select_page == 'Головна сторінка':
 
 
     st.subheader('Вплив на людину')
-    image_human = Image.open('C:/Users/kalok/PycharmProjects/mkalokhina/human_air.jpg')
+    image_human = Image.open('human_air.jpg')
     st.image(image_human)
     st.write(
     """
@@ -99,8 +99,8 @@ if select_page == 'Візуалізація':
     # загрузка даних
     @st.cache_data
     def load_data():
-        df_air = pd.read_excel("C:/Users/kalok/PycharmProjects/mkalokhina/openaq.xlsx")
-        df_geo = pd.read_excel("C:/Users/kalok/PycharmProjects/mkalokhina/worldcities1.xlsx")
+        df_air = pd.read_excel("openaq.xlsx")
+        df_geo = pd.read_excel("worldcities1.xlsx")
         df = pd.merge(df_air, df_geo, left_on=['Country Code', 'City'], right_on=[
             'iso2', 'City'], how='left')
         df = df.dropna(subset=['Coordinates'])
@@ -231,7 +231,7 @@ if select_page == 'Рекомендації':
         1. Використовуйте громадський транспорт, велосипед або йдіть пішки замість того, щоб їздити на автомобілі. Транспортні засоби є одним із основних джерел забруднення повітря, особливо у містах.
         """)
 
-    photo1 = Image.open('C:/Users/kalok/PycharmProjects/mkalokhina/photo1.jpg')
+    photo1 = Image.open('photo1.jpg')
     st.image(photo1)
         
     st.write(
@@ -239,35 +239,35 @@ if select_page == 'Рекомендації':
         2. Використовуйте електромобілі або гібридні автомобілі, які виділяють менше шкідливих речовин в атмосферу.
         """)
 
-    photo2 = Image.open('C:/Users/kalok/PycharmProjects/mkalokhina/photo2.jpg')
+    photo2 = Image.open('photo2.jpg')
     st.image(photo2)
 
     st.write(
         """
         3. Слідкуйте за тим, що спалюєте. Уникайте спалювання сміття, листя, гілок та інших відходів, оскільки це є одним із джерел викидів в атмосферу.
         """)
-    photo3 = Image.open('C:/Users/kalok/PycharmProjects/mkalokhina/photo3.jpg')
+    photo3 = Image.open('photo3.jpg')
     st.image(photo3)
 
     st.write(
         """
         4. Використовуйте енергоефективні та екологічно чисті системи опалення та кондиціювання повітря. Зверніть увагу на енергоефективність при покупці нових пристроїв.
         """)
-    photo4 = Image.open('C:/Users/kalok/PycharmProjects/mkalokhina/photo4.jpg')
+    photo4 = Image.open('photo4.jpg')
     st.image(photo4)
 
     st.write(
         """
         5. Намагайтеся заощаджувати електроенергію. Вимикайте світло та електроприлади, коли вони не використовуються.
         """)
-    photo5 = Image.open('C:/Users/kalok/PycharmProjects/mkalokhina/photo5.jpg')
+    photo5 = Image.open('photo5.jpg')
     st.image(photo5)
 
     st.write(
         """
         6. Підтримуйте та дотримуйтесь екологічних вимог та законів, які спрямовані на скорочення викидів шкідливих речовин в атмосферу.
         """)
-    photo6 = Image.open('C:/Users/kalok/PycharmProjects/mkalokhina/photo6.jpg')
+    photo6 = Image.open('photo6.jpg')
     st.image(photo6)
 
     st.write(
